@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "a little Library to parse the Whatsapp Message Export txt to a Message Struct"
 authors = ["Shadowdara"]
-license = "Appache-2.0"
+license = "Apache-2.0"
 repository = "https://github.com/shadowdara/wa_msg_parser"
 readme = "README.md"
 
