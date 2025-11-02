@@ -1,5 +1,12 @@
 use regex::Regex;
 
+#[cfg(feature = "json")]
+pub mod json;
+
+#[cfg(feature = "serde")]
+pub mod serde;
+
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Message {
     pub date: String,

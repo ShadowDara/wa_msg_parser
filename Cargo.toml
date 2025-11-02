@@ -1,12 +1,28 @@
 [package]
 name = "wa_msg_parser"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "a little Library to parse the Whatsapp Message Export txt to a Message Struct"
 authors = ["Shadowdara"]
 license = "Apache-2.0"
 repository = "https://github.com/shadowdara/wa_msg_parser"
 readme = "README.md"
+include = ["LICENSE", "README.md", "Cargo.toml", "/src/"]
+keywords = ["parser", "whatsapp", "export"]
 
 [dependencies]
 regex = "1.11"
+
+# optional: nur aktiv, wenn Feature "serde" oder "json" genutzt wird
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+
+[features]
+# keine Features per Default aktiv
+default = []
+
+# Feature "serde" aktiviert nur serde
+serde = ["dep:serde"]
+
+# Feature "json" aktiviert serde + serde_json
+json = ["dep:serde", "dep:serde_json"]
