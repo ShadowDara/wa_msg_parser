@@ -25,4 +25,4 @@ default = []
 serde = ["dep:serde"]
 
 # Feature "json" aktiviert serde + serde_json
-json = ["dep:serde", "dep:serde_json"]
+json = ["serde", "dep:serde_json"]
