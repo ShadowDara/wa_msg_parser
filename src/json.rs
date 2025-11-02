@@ -1,3 +1,5 @@
+use crate Message;
+
 #[cfg(feature = "json")]
 pub fn messages_to_json(messages: &[Message]) -> String {
     serde_json::to_string(messages).unwrap()
