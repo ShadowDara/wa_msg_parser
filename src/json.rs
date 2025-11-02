@@ -1,4 +1,5 @@
-use crate Message;
+#[cfg(feature = "json")]
+use crate::Message;
 
 #[cfg(feature = "json")]
 pub fn messages_to_json(messages: &[Message]) -> String {
